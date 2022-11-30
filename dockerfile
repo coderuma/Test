@@ -1,4 +1,5 @@
 FROM httpd:latest
 EXPOSE 80/tcp
-ADD home.html /var/www/html
+WORKDIR /var/www/html
+ADD home.html .
 CMD service apache2 start
